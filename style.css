@@ -1,0 +1,193 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body{
+    background-color: rgb(2, 13, 23);
+    color: white;
+}
+
+.header{
+    position: fixed;
+    top: 0;
+    left:0;
+    width: 100%;
+    padding: 20px 10%;
+    background:transparent;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+
+.logo{
+    font-size: 25px;
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+    cursor: pointer;
+    opacity: 0;
+    animation: slideright 1s ease forwards;
+}
+
+.navbar a{
+    font-size: 18px;
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    margin-left: 35px;
+    transition: .3s;
+    opacity: 0;
+    animation: sidetop 1s ease forwards;
+    animation-delay: calc(.2s *var(--i));
+
+}
+
+.navbar a.hover,
+.navbar a.active{
+    color:aqua;
+}
+.home{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 70px 10% 0;
+
+}
+
+.home-content{
+    max-width: 600px;
+}
+.home-content h1{
+    font-size: 50px;
+    font-weight: 70;
+    margin: -3px 0;
+    opacity: 0;
+    animation: slideright 1s ease forwards;
+    animation-delay: 1s;
+}
+
+.home-content h3{
+    font-size: 32px;
+    font-family: 700;
+    opacity: 0;
+    animation: slidebottom 1s ease forwards;
+    animation-delay: .7s;
+}
+
+.home-content h3:nth-of-type(2){
+    margin-bottom: 30px;
+    animation: slidetop 1s ease forwards;
+    animation-delay: .7s;
+}
+.home-content h3 span{
+    color:rgb(40, 137, 158);
+
+}
+
+.home-content p{
+    font-weight: 400;
+    font-size: 30px;
+    opacity: 0px;
+    animation: slideleft 1s ease forwards;
+    animation-delay: 2s;
+}
+
+.home-img img{
+    max-width: 450px;
+    margin-right: -20px;
+    opacity: 0;
+    animation: zoomin 1s ease forwards;
+    animation-delay: 1s;
+}
+
+.social-media a{
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    background: transparent;
+    border: 2px solid aqua;
+    border-radius: 50%;
+    font-size: 20px;
+    color:rgb(51, 173, 173);
+    text-decoration: none;
+    box-shadow: 0 0 20px aqua;
+    margin: 30px 14px 13px 0;
+    transition: .5s ease;
+    opacity: 0;
+    animation: slideleft 1s ease forwards;
+    animation-delay: calc(.2s *var(--i));
+}
+
+.btn{
+    display: inline-block;
+    padding: 12px 28px;
+    background: rgb(67, 132, 132);
+    border-radius: 40px;
+    box-shadow: 0 0 10px aqua;
+    text-decoration: none;
+    color: black;
+    letter-spacing: 1px;
+    font-weight: 400;
+    opacity: 0;
+    animation: slidetop 1s ease forwards;
+    animation-delay: 2s;
+}
+@keyframes slideleft{
+    0%{
+        transform: translatex(100px);
+        opacity: 0;
+    }
+    100%{
+        transform: translatex(0);
+        opacity: 1;
+    }
+}
+@keyframes slideright {
+    0%{
+        transform: translatex(100px);
+        opacity: 0;
+    }
+    100%{
+        transform: translatex(0);
+        opacity: 1;
+    }
+}
+@keyframes slidetop{
+    0%{
+        transform: translatey(100px);
+        opacity: 0;
+    }
+    100%{
+        transform: translatey(0);
+        opacity: 1;
+    }
+}
+@keyframes slidebottom {
+    0%{
+        transform: translatey(100px);
+        opacity: 0;
+    }
+    100%{
+        transform: translatey(0);
+        opacity: 1;
+    }
+}
+@keyframes zoomin {
+    0%{
+        transform: scale(100px);
+        opacity: 0;
+    }
+    100%{
+        transform: scale(0);
+        opacity: 1;
+    }
+}
